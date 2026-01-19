@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import styles from "./styles/Header.module.scss";
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="header">
-      <div className="logo" onClick={() => scroll.scrollToTop()}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+      <div className={styles.logo} onClick={() => scroll.scrollToTop()}>
         My Portfolio
       </div>
-      <nav className={navOpen ? "nav open" : "nav"}>
+      <nav className={navOpen ? `${styles.nav} ${styles.open}` : styles.nav}>
         <Link to="main" smooth={true} duration={500}>
           Home
         </Link>
@@ -22,7 +37,7 @@ export default function Header() {
           Contact
         </Link>
       </nav>
-      <div className="nav-toggle" onClick={() => setNavOpen(!navOpen)}>
+      <div className={styles.navToggle} onClick={() => setNavOpen(!navOpen)}>
         ☰
       </div>
     </header>

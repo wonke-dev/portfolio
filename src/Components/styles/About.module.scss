@@ -1,0 +1,57 @@
+.about {
+  background: #f1e9fb;
+  .container {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .more {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 220px;
+      height: 34px;
+      border-radius: 17px;
+      border: 1px solid #831ed2;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: 0 16px;
+      color: #831ed2;
+      text-decoration: none;
+
+      &:hover {
+        background: #831ed2;
+        color: #fff;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    font-size: 24px;
+    .info_box {
+      &.experience {
+        display: flex;
+        gap: 200px;
+      }
+
+      .title {
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #56128a;
+      }
+    }
+  }
+}

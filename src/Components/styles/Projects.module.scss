@@ -1,0 +1,38 @@
+.projects {
+  width: 100%;
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 4rem;
+
+    h2 {
+      font-size: 60px;
+    }
+  }
+
+  .swiperContainer {
+    margin-top: 50px;
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+  }
+
+  :global(.swiper) {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  :global(.swiper-slide) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
