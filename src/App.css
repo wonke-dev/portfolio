@@ -5,7 +5,7 @@
 }
 body {
   background: #fff;
-  color: #000;
+  color: #333;
   font-family: "Manrope", sans-serif;
   transition: background 0.3s, color 0.3s;
   overflow-x: hidden;
@@ -36,13 +36,7 @@ body {
   text-decoration: none;
   transition: color 0.3s;
 }
-.nav a:hover {
-  color: #ffeb3b;
-}
-.nav-toggle {
-  display: none;
-  cursor: pointer;
-}
+
 .section {
   min-height: 100vh;
   padding: 5rem 2rem;
@@ -50,42 +44,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.main {
-  background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
-}
-.main h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.main p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-.main button {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  background: #4e54c8;
-  color: #fff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.main button:hover {
-  background: #3c40a4;
-}
-.about {
-  background: #fff;
-}
-
-.contact {
-  background: #fff;
-}
-.footer {
-  background: #4e54c8;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
 }
 
 /* 다크 모드 감지 */

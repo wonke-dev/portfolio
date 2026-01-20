@@ -1,7 +1,9 @@
+import styles from "./styles/Footer.module.scss";
+
 export default function Footer() {
   return (
-    <footer className="footer">
-      <p>© {new Date().getFullYear()} Jane Doe. All rights reserved.</p>
+    <footer className={styles.footer}>
+      <p>© {new Date().getFullYear()} LWK. All rights reserved.</p>
     </footer>
   );
 }

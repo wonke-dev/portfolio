@@ -1,5 +1,4 @@
 .about {
-  background: #f1e9fb;
   .container {
     padding: 0 2rem;
     display: flex;
@@ -9,6 +8,9 @@
   }
 
   .profile {
+    h2 {
+      font-size: 65px;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,7 +43,7 @@
     flex-direction: column;
     gap: 70px;
     font-size: 24px;
-    .info_box {
+    .infoBox {
       &.experience {
         display: flex;
         gap: 200px;
