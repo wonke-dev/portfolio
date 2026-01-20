@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo} onClick={() => scroll.scrollToTop()}>
-        My Portfolio
+        LWK Portfolio
       </div>
       <nav className={navOpen ? `${styles.nav} ${styles.open}` : styles.nav}>
         <Link to="main" smooth={true} duration={500}>
