@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./styles/Main.module.scss";
-import circleImg from "../images/main_circle.png";
+//import circleImg from "../images/main_circle.png";
 
 export default function Main() {
   const mainRef = useRef(null);
@@ -49,31 +49,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className={styles.skill}>
-        <div className={styles.skill_list}>
-          {[
-            "#HTML",
-            "#CSS",
-            "#JavaScript",
-            "#jQuery",
-            "#React",
-            "#Git",
-            "#SEO",
-            "#Figma",
-            "#Jira",
-          ].map((skill, index) => (
-            <span
-              key={skill}
-              className={index < 5 ? styles.on : ""}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <img src={circleImg} alt="circle" className={styles.circle} data-parallax="-0.2" />
+      {/* <img src={circleImg} alt="circle" className={styles.circle} data-parallax="-0.2" /> */}
 
       <div className={styles.scrollIndicator}>
         <div className={styles.mouse}>

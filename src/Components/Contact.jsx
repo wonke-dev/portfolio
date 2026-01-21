@@ -1,4 +1,5 @@
 import styles from "./styles/Contact.module.scss";
+import { skills } from "../config";
 
 export default function Contact() {
   return (
@@ -24,6 +25,21 @@ export default function Contact() {
               </a>
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className={styles.skill}>
+        <div className={styles.skill_track}>
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className={styles.skill_list} aria-hidden={i > 0}>
+              {skills.map((skill) => (
+                <span key={`${i}-${skill.id}`}>
+                  <img src={skill.image} alt={skill.title} />
+                  {skill.title}
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

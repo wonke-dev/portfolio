@@ -14,7 +14,7 @@ export default function About() {
             <div className={styles.imageGlow}></div>
           </div>
           <a
-            href="https://example.com"
+            href="https://wonkyung-space.notion.site/LEE-WON-KYUNG-89bfe0210e054ef9a07c93a783acf834?source=copy_link"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.more}
