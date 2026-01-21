@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .contact {
   position: relative;
   overflow: hidden;
@@ -13,26 +15,26 @@
 
   .container {
     width: 100%;
-    padding: 0 4rem;
+    padding: 0 $container-padding;
     text-align: center;
     position: relative;
     z-index: 1;
 
     .text {
-      font-size: 24px;
-      margin-bottom: 50px;
+      font-size: $font-size-2xl;
+      margin-bottom: $spacing-3xl;
       position: relative;
       display: inline-block;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: -10px;
+        bottom: clamp(-6px, -0.5vw, -10px);
         left: 50%;
         transform: translateX(-50%);
-        width: 50px;
-        height: 3px;
-        background: linear-gradient(90deg, #831ed2, #667eea);
+        width: clamp(30px, 3vw + 15px, 50px);
+        height: clamp(2px, 0.2vw + 1px, 3px);
+        background: linear-gradient(90deg, $primary-color, $secondary-color);
         border-radius: 2px;
         animation: expandLine 1s ease forwards;
         animation-delay: 0.5s;
@@ -41,13 +43,13 @@
   }
 
   .content {
-    background: linear-gradient(180deg, #f6f1fc 20%, #fff 64%);
-    max-width: 1200px;
-    border-radius: 32px;
+    background: linear-gradient(180deg, $bg-light 20%, #fff 64%);
+    max-width: clamp(320px, 80vw, 1200px);
+    border-radius: $radius-2xl;
     width: 100%;
     margin: 0 auto;
     height: min-content;
-    padding: 60px 40px;
+    padding: $spacing-3xl $spacing-2xl;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,8 +81,8 @@
 
     .glowEffect {
       position: absolute;
-      width: 300px;
-      height: 300px;
+      width: clamp(150px, 20vw + 50px, 300px);
+      height: clamp(150px, 20vw + 50px, 300px);
       background: radial-gradient(circle, rgba(131, 30, 210, 0.15) 0%, transparent 70%);
       border-radius: 50%;
       top: 50%;
@@ -94,14 +96,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: $spacing-lg;
       position: relative;
       z-index: 1;
     }
 
     h2 {
-      font-size: 65px;
-      background: linear-gradient(135deg, #333 0%, #831ed2 50%, #667eea 100%);
+      font-size: $font-size-section-title;
+      background: linear-gradient(
+        135deg,
+        $text-color 0%,
+        $primary-color 50%,
+        $secondary-color 100%
+      );
       background-size: 200% 100%;
       -webkit-background-clip: text;
       background-clip: text;
@@ -110,18 +117,18 @@
     }
 
     p {
-      font-size: 24px;
+      font-size: $font-size-2xl;
       transition: transform 0.3s ease;
 
       span {
         font-weight: 700;
-        color: #831ed2;
+        color: $primary-color;
       }
     }
 
     a {
       text-decoration: none;
-      color: #333;
+      color: $text-color;
       position: relative;
       transition: color 0.3s ease;
     }
@@ -132,7 +139,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: $skill-bar-height;
     overflow: hidden;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -159,26 +166,26 @@
     &_list {
       display: flex;
       align-items: center;
-      gap: 28px;
-      padding: 0 14px;
-      height: 100px;
+      gap: clamp(14px, 1.5vw + 8px, 28px);
+      padding: 0 clamp(8px, 1vw + 4px, 14px);
+      height: $skill-bar-height;
     }
 
     span {
       display: inline-flex;
       align-items: center;
-      font-size: 12px;
+      font-size: $font-size-sm;
       font-weight: 500;
       line-height: 1.5;
-      padding: 6px 16px;
+      padding: $spacing-xs $spacing-md;
       border-radius: 18px;
-      color: #565656;
+      color: $text-muted;
       white-space: nowrap;
       transition: all 0.3s ease;
 
       &:hover {
         background: rgba(131, 30, 210, 0.1);
-        color: #831ed2;
+        color: $primary-color;
 
         img {
           filter: grayscale(0);
@@ -187,9 +194,9 @@
       }
 
       img {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
+        width: clamp(20px, 2vw + 10px, 30px);
+        height: clamp(20px, 2vw + 10px, 30px);
+        margin-right: $spacing-sm;
         filter: grayscale(1);
         opacity: 0.5;
         transition: all 0.3s ease;
@@ -213,7 +220,7 @@
     width: 0;
   }
   to {
-    width: 50px;
+    width: clamp(30px, 3vw + 15px, 50px);
   }
 }
 

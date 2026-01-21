@@ -1,6 +1,9 @@
+@use "variables" as *;
+
 .footer {
-  background-color: #f6f1fc;
+  background-color: $bg-light;
   color: #56128a;
   text-align: center;
-  padding: 1rem;
+  padding: $spacing-md;
+  font-size: $font-size-base;
 }

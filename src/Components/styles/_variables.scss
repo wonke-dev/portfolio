@@ -1,0 +1,72 @@
+// ===========================================
+// Responsive Clamp Variables
+// clamp(min, preferred, max)
+// ===========================================
+
+// Typography Sizes
+$font-size-xs: clamp(0.625rem, 0.5rem + 0.5vw, 0.75rem);     // 10px ~ 12px
+$font-size-sm: clamp(0.75rem, 0.625rem + 0.5vw, 0.875rem);   // 12px ~ 14px
+$font-size-base: clamp(0.875rem, 0.75rem + 0.5vw, 1rem);     // 14px ~ 16px
+$font-size-md: clamp(1rem, 0.875rem + 0.5vw, 1.125rem);      // 16px ~ 18px
+$font-size-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);       // 18px ~ 24px
+$font-size-xl: clamp(1.25rem, 1rem + 1vw, 1.75rem);          // 20px ~ 28px
+$font-size-2xl: clamp(1.5rem, 1rem + 1.5vw, 2rem);           // 24px ~ 32px
+$font-size-3xl: clamp(2rem, 1.5rem + 2vw, 3rem);             // 32px ~ 48px
+$font-size-4xl: clamp(2.5rem, 1.5rem + 3vw, 4rem);           // 40px ~ 64px
+$font-size-hero: clamp(3rem, 2rem + 4vw, 5rem);              // 48px ~ 80px
+
+// Section Title (65px target)
+$font-size-section-title: clamp(2rem, 1rem + 4vw, 4.0625rem); // 32px ~ 65px
+
+// Spacing
+$spacing-xs: clamp(0.25rem, 0.125rem + 0.5vw, 0.5rem);       // 4px ~ 8px
+$spacing-sm: clamp(0.5rem, 0.25rem + 0.75vw, 1rem);          // 8px ~ 16px
+$spacing-md: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);           // 12px ~ 24px
+$spacing-lg: clamp(1rem, 0.5rem + 1.5vw, 2rem);              // 16px ~ 32px
+$spacing-xl: clamp(1.5rem, 1rem + 2vw, 3rem);                // 24px ~ 48px
+$spacing-2xl: clamp(2rem, 1rem + 3vw, 4rem);                 // 32px ~ 64px
+$spacing-3xl: clamp(2.5rem, 1.5rem + 3.5vw, 5rem);           // 40px ~ 80px
+$spacing-4xl: clamp(3rem, 2rem + 4vw, 6rem);                 // 48px ~ 96px
+
+// Container Padding
+$container-padding: clamp(1rem, 0.5rem + 3vw, 4rem);         // 16px ~ 64px
+$container-padding-lg: clamp(1.5rem, 1rem + 4vw, 6rem);      // 24px ~ 96px
+
+// Gap Sizes
+$gap-sm: clamp(0.5rem, 0.25rem + 0.75vw, 1rem);              // 8px ~ 16px
+$gap-md: clamp(1rem, 0.5rem + 1.5vw, 2rem);                  // 16px ~ 32px
+$gap-lg: clamp(1.5rem, 1rem + 2vw, 2.5rem);                  // 24px ~ 40px
+$gap-xl: clamp(2rem, 1rem + 3vw, 4rem);                      // 32px ~ 64px
+$gap-2xl: clamp(2.5rem, 1.5rem + 4vw, 4.375rem);             // 40px ~ 70px
+$gap-3xl: clamp(3rem, 1.5rem + 5vw, 6rem);                   // 48px ~ 96px
+
+// Border Radius
+$radius-sm: clamp(0.25rem, 0.125rem + 0.25vw, 0.5rem);       // 4px ~ 8px
+$radius-md: clamp(0.5rem, 0.25rem + 0.5vw, 0.75rem);         // 8px ~ 12px
+$radius-lg: clamp(0.75rem, 0.5rem + 0.75vw, 1rem);           // 12px ~ 16px
+$radius-xl: clamp(1rem, 0.5rem + 1vw, 1.5rem);               // 16px ~ 24px
+$radius-2xl: clamp(1.5rem, 1rem + 1.5vw, 2rem);              // 24px ~ 32px
+
+// Component Sizes
+$circle-size: clamp(80px, 60px + 5vw, 150px);
+$card-height: clamp(280px, 200px + 15vw, 480px);
+$skill-bar-height: clamp(60px, 50px + 3vw, 100px);
+
+// Floating Shape Sizes
+$shape-size-lg: clamp(200px, 150px + 12vw, 400px);
+$shape-size-md: clamp(150px, 100px + 10vw, 300px);
+$shape-size-sm: clamp(100px, 80px + 8vw, 200px);
+
+// Header specific
+$header-padding-y: clamp(1rem, 0.75rem + 1vw, 2.5rem);
+$header-padding-x: clamp(1rem, 0.5rem + 2.5vw, 4rem);
+$header-gap: clamp(1.5rem, 1rem + 3vw, 6.25rem);             // 24px ~ 100px
+
+// Colors (keeping existing)
+$primary-color: #831ed2;
+$primary-light: #f093fb;
+$secondary-color: #667eea;
+$text-color: #333;
+$text-muted: #565656;
+$bg-light: #f6f1fc;
+

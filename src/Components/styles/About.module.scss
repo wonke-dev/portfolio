@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 .about {
   position: relative;
   overflow: hidden;
@@ -14,57 +16,66 @@
   }
 
   .container {
-    padding: 0 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: clamp(3rem, 2rem + 4vw, 6rem);
     position: relative;
     z-index: 1;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0 0 auto;
+    min-width: clamp(240px, 22vw + 120px, 420px);
 
     h2 {
-      font-size: 65px;
+      font-size: $font-size-section-title;
       position: relative;
 
       &::after {
         content: "";
         position: absolute;
-        bottom: -10px;
+        bottom: clamp(-6px, -0.5vw, -10px);
         left: 50%;
         transform: translateX(-50%);
-        width: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #831ed2, #f093fb);
-        transition: width 0.6s ease;
-      }
-
-      &:hover::after {
         width: 100%;
+        height: clamp(2px, 0.2vw + 1px, 3px);
+        background: linear-gradient(90deg, $primary-color, $primary-light);
+        transition: width 0.6s ease;
       }
     }
 
     .imageWrapper {
       position: relative;
-      margin: 20px 0;
+      margin: $spacing-xl 0 0;
+      width: clamp(220px, 20vw + 100px, 380px);
 
       img {
         position: relative;
         z-index: 1;
         transition: transform 0.5s ease;
-        border-radius: 12px;
+        border-radius: $radius-lg;
+        width: 100%;
+        height: auto;
       }
 
       .imageGlow {
         position: absolute;
-        inset: -20px;
-        background: linear-gradient(135deg, #831ed2 0%, #f093fb 50%, #667eea 100%);
-        border-radius: 20px;
+        inset: clamp(-12px, -1.5vw, -20px);
+        background: linear-gradient(
+          135deg,
+          $primary-color 0%,
+          $primary-light 50%,
+          $secondary-color 100%
+        );
+        border-radius: $radius-xl;
         opacity: 0;
         filter: blur(30px);
         transition: opacity 0.5s ease;
@@ -76,15 +87,15 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 220px;
-      height: 34px;
-      border-radius: 17px;
-      border: 1px solid #831ed2;
-      font-size: 12px;
+      width: clamp(180px, 14vw + 90px, 250px);
+      height: clamp(32px, 2.5vw + 20px, 40px);
+      border-radius: 20px;
+      border: 1px solid $primary-color;
+      font-size: $font-size-base;
       font-weight: 500;
       line-height: 1.5;
-      padding: 0 16px;
-      color: #831ed2;
+      padding: 0 $spacing-md;
+      color: $primary-color;
       text-decoration: none;
       position: relative;
       overflow: hidden;
@@ -97,7 +108,7 @@
         left: 50%;
         width: 0;
         height: 0;
-        background: linear-gradient(135deg, #831ed2, #667eea);
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
         border-radius: 50%;
         transform: translate(-50%, -50%);
         transition: width 0.5s ease, height 0.5s ease;
@@ -119,21 +130,29 @@
   .info {
     display: flex;
     flex-direction: column;
-    gap: 70px;
-    font-size: 24px;
+    gap: $gap-xl;
+    font-size: $font-size-xl;
+    flex: 1;
+    max-width: clamp(450px, 42vw + 180px, 840px);
 
     .infoBox {
       position: relative;
-      padding-left: 20px;
+      padding-left: $spacing-lg;
 
       &.experience {
         display: flex;
-        gap: 200px;
+        gap: clamp(50px, 10vw + 20px, 150px);
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+          gap: clamp(2.5rem, 1.5rem + 3vw, 3.5rem);
+        }
       }
 
       .title {
         font-weight: 700;
-        margin-bottom: 20px;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-md;
         color: #56128a;
         position: relative;
         display: inline-block;
@@ -142,7 +161,8 @@
       .content {
         position: relative;
         transition: all 0.3s ease;
-        padding: 5px 0;
+        font-size: $font-size-lg;
+        line-height: 1.7;
       }
     }
   }
