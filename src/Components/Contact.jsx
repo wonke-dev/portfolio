@@ -7,7 +7,7 @@ export default function Contact() {
       <div className={styles.bgGradient}></div>
       <div className={styles.container}>
         <p className={styles.text} data-aos="fade-up">
-          Thank you for visiting my portfolio.
+         방문해 주셔서 감사합니다.<br />언제든 편하게 연락주세요!
         </p>
         <div className={styles.content} data-aos="zoom-in" data-aos-delay="200">
           <div className={styles.glowEffect}></div>

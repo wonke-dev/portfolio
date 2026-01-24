@@ -42,14 +42,11 @@ export default function Main() {
         </div>
         <div className={styles.box02} data-parallax="0.15">
           <p>
-            I create inclusive, accessible digital products, with experience working with startups
-            and enterprise products. I believe in using product design as a tool to elevate human
-            interaction with technology that scale.
+            더 좋은 코딩 방식을 고민하고 웹 사이트 구현에 보람을 느낍니다.<br />
+            계속해서 변화하는 시대에 맞게 뒤쳐지지 않고 배움의 자세로 나아가겠습니다.
           </p>
         </div>
       </div>
-
-      {/* <img src={circleImg} alt="circle" className={styles.circle} data-parallax="-0.2" /> */}
 
       <div className={styles.scrollIndicator}>
         <div className={styles.mouse}>

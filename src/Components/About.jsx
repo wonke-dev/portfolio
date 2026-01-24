@@ -27,9 +27,8 @@ export default function About() {
         <div className={styles.info}>
           <div className={styles.infoBox} data-aos="fade-left" data-aos-delay="100">
             <p>
-              I create inclusive, accessible digital products, with experience working with startups
-              and enterprise products. I believe in using product design as a tool to elevate human
-              interaction with technology that scale.
+            디자인 구현을 넘어 웹의 구조와 의미까지 고민하는 개발자를 지향합니다.
+            웹 표준과 접근성을 고려한 코드를 작성하며, 지속적인 학습과 반복적인 개선을 통해 더 나은 구조와 품질의 코드를 만들어가고 있습니다.
             </p>
           </div>
           <div className={`${styles.infoBox} ${styles.experience}`}>
