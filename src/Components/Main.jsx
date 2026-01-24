@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import styles from "./styles/Main.module.scss";
-//import circleImg from "../images/main_circle.png";
+// circleImg는 public 폴더에서 직접 참조: "/images/main_circle.png"
 
 export default function Main() {
   const mainRef = useRef(null);

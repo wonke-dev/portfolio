@@ -1,5 +1,5 @@
 import styles from "./styles/About.module.scss";
-import profileImg from "../images/profile.png";
+// profileImg는 public 폴더에서 직접 참조
 
 export default function About() {
   return (
@@ -10,7 +10,7 @@ export default function About() {
             About
           </h2>
           <div className={styles.imageWrapper}>
-            <img src={profileImg} alt="profile" data-aos="zoom-in" data-aos-delay="200" />
+            <img src="/images/profile.png" alt="profile" data-aos="zoom-in" data-aos-delay="200" />
             <div className={styles.imageGlow}></div>
           </div>
           <a
