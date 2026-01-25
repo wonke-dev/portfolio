@@ -20,6 +20,11 @@ import work06 from '/images/work_06.png';
 import work07 from '/images/work_07.png';
 import work08 from '/images/work_08.png';
 
+// import company01 from '/images/company_01.png';
+import company02 from '/images/company_02.png';
+import company03 from '/images/company_03.png';
+import company04 from '/images/company_04.png';
+
 export const skills = [
   {
     id: 1,
@@ -75,13 +80,19 @@ export const projects = [
     description:
       "기존 HTML 랜딩 페이지를 React 기반으로 마이그레이션하고, 공통 레이아웃을 컴포넌트화했습니다. Swiper 라이브러리 교체 및 구조 개선을 통해 유지보수성을 높였습니다.",
     image: work01,
+    company: company04,
+    link: 'https://www.yanadoo.co.kr/',
+    detailPage:'https://www.notion.so/wonkyung-space/2f13399f8fa38045b16ed41ce0120e4a'
   },
   {
     id: 2,
     title: "야핏 사이클",
     description:
       "서비스 소개 및 랜딩 페이지를 제작하고, Spring Boot 환경에서 Thymeleaf를 활용한 공통 레이아웃 구조를 구성했습니다.",
-    image: work02,
+    image: work02,  
+    company: company04,
+    link: 'https://yafit.yanadoo.co.kr/',
+    detailPage:'https://www.notion.so/wonkyung-space/2f13399f8fa380fd9826c30f018f1397'
   },
   {
     id: 3,
@@ -89,6 +100,8 @@ export const projects = [
     description:
       "WebView 환경에서 디지털 학습지 화면을 구현했습니다. Lottie 및 CSS 애니메이션 적용, 퀴즈형 페이지 스크립트 개발, iPad Safe Area 대응을 진행했습니다.",
     image: work03,
+    company: company04,
+    detailPage:'https://www.notion.so/wonkyung-space/AI-2f23399f8fa3808b9ebdd208d61663be'
   },
   {
     id: 4,
@@ -96,6 +109,9 @@ export const projects = [
     description:
       "Swiper를 활용해 소개 영상 슬라이드를 제작하고, 각 영상 클릭 시 전체 화면으로 재생되는 인터랙션을 구현했습니다.",
     image: work04,
+    company: company03,
+    link: 'https://about.aipartner.com/',
+    detailPage:'https://www.notion.so/wonkyung-space/2ef3399f8fa38006ae20e475be8badcc'
   },
   {
     id: 5,
@@ -103,6 +119,9 @@ export const projects = [
     description:
       "부동산 뉴스 전용 페이지를 제작하며 SCSS로 공통 스타일 가이드를 구성해 코드 재사용성과 유지보수성을 높였습니다.",
     image: work05,
+    company: company03,
+    link: 'https://www.aipartner.com/news/list',
+    detailPage:'https://www.notion.so/wonkyung-space/2ef3399f8fa380c28796e9769d75eacd'
   },
   {
     id: 6,
@@ -110,6 +129,8 @@ export const projects = [
     description:
       "부동산 매물 분석 서비스로, 컴포넌트 기반 UI를 구축하고 프론트엔드 개발팀과 협업해 지도 및 필터링 화면을 구현했습니다.",
     image: work06,
+    company: company03,
+    link: 'https://www.aipartner.plus/',
   },
   {
     id: 7,
@@ -117,13 +138,19 @@ export const projects = [
     description:
       "HTML, CSS, JavaScript를 사용해 반응형 웹 페이지를 제작했습니다.",
     image: work07,
+    company: company02,
+    link: 'https://www.slidemembers.com/ko_KR/',
+    detailPage:'https://www.notion.so/wonkyung-space/Slide-Members-2f13399f8fa380d4a677fc7045b038a0'
   },
   {
     id: 8,
     title: "예스폼 & 패밀리 사이트",
     description:
-      "메인 페이지 리뉴얼 퍼블리싱을 담당했으며, 동일한 스타일 가이드로 패밀리 사이트 리뉴얼 작업을 함께 진행했습니다.",
+      "사이트 리뉴얼 퍼블리싱을 담당했으며, 동일한 스타일 가이드로 패밀리 사이트 리뉴얼 작업을 함께 진행했습니다.",
     image: work08,
+    company: company02,
+    link:'https://www.yesform.com/',
+    detailPage:'https://www.notion.so/wonkyung-space/2ef3399f8fa3809fa571d4c08f740da5'
   },
   
 ];

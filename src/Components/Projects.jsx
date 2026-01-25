@@ -18,6 +18,7 @@ const chunkArray = (array, size) => {
 export default function Project() {
   const projectChunks = chunkArray(projects, 4);
   const [hoveredImage, setHoveredImage] = useState(projects[0]?.image || null);
+  const [hoveredProject, setHoveredProject] = useState(projects[0] || null);
 
   return (
     <section id="projects" className={`${styles.projects} section`}>
@@ -36,6 +37,7 @@ export default function Project() {
               const firstProjectInSlide = projectChunks[swiper.activeIndex]?.[0];
               if (firstProjectInSlide) {
                 setHoveredImage(firstProjectInSlide.image);
+                setHoveredProject(firstProjectInSlide);
               }
             }}
           >
@@ -47,21 +49,41 @@ export default function Project() {
                       <div
                         key={project.id}
                         className={styles.card}
-                        onMouseEnter={() => setHoveredImage(project.image)}
+                        onMouseEnter={() => {
+                          setHoveredImage(project.image);
+                          setHoveredProject(project);
+                        }}
                         style={{ animationDelay: `${index * 0.1}s` }}
                       >
                         <p className={styles.title}>{project.title}</p>
                         <p className={styles.description}>{project.description}</p>
+                        <img src={project.company} alt={project.company} className={styles.company} />
                       </div>
                     ))}
                   </div>
                   <div className={styles.imageWrapper}>
                     {hoveredImage && (
-                      <img
-                        src={hoveredImage}
-                        alt={hoveredImage?.title}
-                        className={styles.previewImage}
-                      />
+                      <>
+                        <img
+                          src={hoveredImage}
+                          alt={hoveredImage?.title}
+                          className={styles.previewImage}
+                        />
+                        {hoveredProject && (
+                          <div className={styles.linkWrapper}>
+                            {hoveredProject.link && (
+                              <a href={hoveredProject.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                                <p>사이트 바로가기</p>
+                              </a>
+                            )}
+                            {hoveredProject.detailPage && (
+                              <a href={hoveredProject.detailPage} target="_blank" rel="noopener noreferrer" className={styles.detailPage}>
+                                <p>작업 설명 보기</p>
+                              </a>
+                            )}
+                          </div>
+                        )}
+                      </>
                     )}
                     <div className={styles.imageOverlay}></div>
                   </div>
