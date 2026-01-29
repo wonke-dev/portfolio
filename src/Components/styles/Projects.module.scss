@@ -145,6 +145,7 @@
       }
 
       &:hover {
+        
         flex: 2.5;
         transform: translateY(-5px);
         box-shadow: rgba(131, 30, 210, 0.15) 0px 10px 40px -10px,
@@ -153,6 +154,10 @@
         &::before {
           opacity: 1;
           animation: gradientFlow 3s ease infinite;
+        }
+
+        .title{
+          font-size: $font-size-lg;
         }
 
         .description {
@@ -211,10 +216,6 @@
       font-weight: 700;
       flex-shrink: 0;
       transition: color 0.3s ease;
-
-      .card:hover & {
-        color: $primary-color;
-      }
     }
 
     .description {
